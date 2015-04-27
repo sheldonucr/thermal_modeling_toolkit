@@ -1,0 +1,34 @@
+This gui includes linear system identification and piecewise linear system identification
+
+Linear system identification
+
+1. Create the data file for identification. Save the input as 'u_p_vec' and output as 'y_temp_vec'; the time is saved as 't' into a mat file.
+     ex:
+       u_p_vec = inputpower(dimension, time_points);
+       y_temp_vec = inputpower(dimension, time_points); 
+       save('prbs.mat', 'u_p_vec', 'y_temp_vec','t');
+
+2. Type sid_temp to start the gui
+
+3. Double click the data file to download the data for identification
+
+4. Specify the order and the time point used for training the system
+
+5. Specify the SID method in the pull-down selection
+
+6. Click RUNSID
+
+7. Specify output ports to plot the transient output 
+
+8. Specify input-output pair to plot bodeplot and print transfer function. 
+
+
+Piecewise linear system identification
+
+Using the same procedure from step 1 to step 7, except that:
+  a) in step 4, you need to specify the data length to identify each sub-model and the data points shared by the two adjacent sub-models. 
+  b) step 5 is omitted for piecewise system identification because only N4SID is used in this method 
+  c) bode plot and transfer function print is disabled if using this method
+
+
+ 
